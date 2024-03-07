@@ -1,0 +1,21 @@
+<div class="service-container">
+  <div>
+    <h1>Servicios de Crecimiento Empresarial</h1>
+    <h4>
+      Somos el vector para integrar tus áreas de negocio al mundo digital.
+    </h4>
+    <h4>
+      Te ayudamos a construir valor aplicando tecnología para dar nuevos y
+      mejores servicios.
+    </h4>
+  </div>
+  <div class="services-cards">
+    @for(s of serviceData; track s.id){
+    <servicecard
+      imageUrl="{{ s.imageUrl }}"
+      title="{{ s.title }}"
+      description="{{ s.description }}"
+    />
+    }
+  </div>
+</div>

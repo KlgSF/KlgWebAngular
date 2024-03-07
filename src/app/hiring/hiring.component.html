@@ -1,0 +1,87 @@
+<button type="button" class="btn btn-primary" (click)="redirectToHome()">
+  Volver
+</button>
+<h2>Formulario de Hiring</h2>
+<form
+  [formGroup]="hiringForm"
+  class="row g-3 needs-validation"
+  novalidate
+  (submit)="submitForm($event)"
+>
+  <div class="mb-3">
+    <label for="fullName" class="form-label">Nombre completo</label>
+    <input
+      type="text"
+      class="form-control"
+      id="fullName"
+      formControlName="name"
+      [ngClass]="{
+        'is-invalid': hasErrors('name', 'required')
+      }"
+    />
+    @if (hasErrors('name', 'required')) {
+    <span class="text-danger">Debes completar este campo</span>
+    }
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Correo</label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      formControlName="email"
+      [ngClass]="{
+        'is-invalid':
+          hasErrors('email', 'required') || hasErrors('email', 'email')
+      }"
+    />
+    @if (hasErrors('email', 'required')) {
+    <span class="text-danger">Debes completar este campo</span>
+    } @if (hasErrors('email', 'email')) {
+    <span class="text-danger">Ingresa un correo valido</span>
+    }
+  </div>
+  <div class="mb-3">
+    <label for="interestedIn" class="form-label"
+      >Porque estas interesado en KLG</label
+    >
+    <textarea
+      class="form-control"
+      id="interestedIn"
+      rows="3"
+      formControlName="interestedIn"
+      [ngClass]="{
+        'is-invalid': hasErrors('interestedIn', 'required')
+      }"
+    ></textarea>
+    @if (hasErrors('interestedIn', 'required')) {
+    <span class="text-danger">Debes completar este campo</span>
+    }
+  </div>
+  <div class="mb-3">
+    <label for="portfolio" class="form-label">Link de su portfolio</label>
+    <input
+      type="text"
+      class="form-control"
+      id="portfolio"
+      formControlName="portfolio"
+    />
+  </div>
+  <div class="input-group mb-3">
+    <label class="input-group-text" for="file">Adjunte su CV</label>
+    <input
+      type="file"
+      class="form-control"
+      id="file"
+      formControlName="file"
+      [ngClass]="{
+        'is-invalid': hasErrors('file', 'required')
+      }"
+    />
+    @if (hasErrors('file', 'required')) {
+    <span class="text-danger">Debes completar este campo</span>
+    }
+  </div>
+
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>

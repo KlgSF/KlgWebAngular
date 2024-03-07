@@ -1,0 +1,15 @@
+ /* Estilos para los botones en Nav */
+ .navigation button {
+    background-color: #ffffff;
+    border: none;
+    color: #2702fc;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-family: Cambria, sans-serif; /* Cambria como primera opción, y sans-serif como alternativa */
+  }
+  
+  .navigation button:hover {
+    color: #180680;
+  }
+  

@@ -1,0 +1,23 @@
+.clients-partners-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.text-section {
+  margin-bottom: 20px;
+}
+
+.images-section {
+  display: flex;
+  justify-content: space-around; /* Ajusta según el espacio deseado entre las imágenes */
+}
+
+.images-section img {
+  max-height: 100px;
+  width: auto;
+}
+
+.carousel-inner {
+  width: 30%;
+  height: 30%;
+}

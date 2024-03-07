@@ -1,0 +1,28 @@
+/* ServiceCard.css */
+
+.service-card {
+  max-width: 300px; /* Ancho máximo de cada tarjeta */
+  margin: 0 10px; /* Espaciado entre las tarjetas */
+  background-color: transparent; /* Fondo transparente */
+  color: #000000; /* Texto blanco */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  box-sizing: border-box; /* Incluye el relleno en el ancho y alto total */
+  border: 2px solid #00000088; /* Borde de 2px de grosor y color negro */
+}
+
+.service-card img {
+  max-width: 100%; /* Asegura que la imagen no se desborde de la tarjeta */
+  border-radius: 8px; /* Bordes redondeados para la imagen */
+  margin-bottom: 15px; /* Espaciado inferior entre la imagen y el título */
+}
+
+.service-card h3 {
+  font-size: 1.5em; /* Tamaño del título */
+  margin-bottom: 10px; /* Espaciado inferior entre el título y el párrafo */
+}
+
+.service-card p {
+  font-size: 1em; /* Tamaño del párrafo */
+  margin: 0; /* Asegura que no haya margen adicional en el párrafo */
+}

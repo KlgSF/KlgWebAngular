@@ -1,0 +1,74 @@
+<h2>Formulario de contacto</h2>
+<form
+  [formGroup]="contactForm"
+  class="row g-3 needs-validation"
+  novalidate
+  (submit)="submitForm($event)"
+>
+  <div class="mb-3">
+    <label for="fullName" class="form-label">Nombre completo</label>
+    <input
+      type="text"
+      class="form-control"
+      id="fullName"
+      formControlName="name"
+      [ngClass]="{
+        'is-invalid': hasErrors('name', 'required')
+      }"
+    />
+    @if (hasErrors('name', 'required')) {
+    <span class="text-danger">Debes completar este campo</span>
+    }
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Correo</label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      formControlName="email"
+      [ngClass]="{
+        'is-invalid':
+          hasErrors('email', 'required') || hasErrors('email', 'email')
+      }"
+    />
+  </div>
+  @if (hasErrors('email', 'required')) {
+  <span class="text-danger">Debes completar este campo</span>
+  } @if (hasErrors('email', 'email')) {
+  <span class="text-danger">Ingresa un correo valido</span>
+  }
+  <label for="fullName" class="form-label">Interesado en</label>
+  <select
+    class="form-select"
+    aria-label="interestedIn"
+    formControlName="interestedIn"
+    [ngClass]="{
+      'is-invalid': hasErrors('interestedIn', 'required')
+    }"
+  >
+    <option value=""></option>
+    <option value="General Inquiry">General Inquiry</option>
+    <option value="Product Information">Product Information</option>
+    <option value="Support">Support</option>
+  </select>
+  @if (hasErrors('interestedIn', 'required')) {
+  <span class="text-danger">Debes completar este campo</span>
+  }
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label"
+      >Informacion adicional</label
+    >
+    <textarea
+      class="form-control"
+      id="exampleFormControlTextarea1"
+      rows="3"
+      formControlName="extra"
+      [ngClass]="{
+        'is-invalid': hasErrors('extra', 'required')
+      }"
+    ></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>

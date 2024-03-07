@@ -1,0 +1,25 @@
+/* Services.css */
+
+.service-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 50px auto; /* Ajusta el margen según sea necesario */
+  }
+  
+  .service-container h1 {
+    margin-bottom: 30px; /* Espacio entre el título y los párrafos */
+  }
+  
+  .service-container h4 {
+    margin-bottom: 10px; /* Espacio entre los párrafos */
+  }
+  
+  .services-cards {
+    display: flex;
+    justify-content: space-around; /* Ajusta el espacio entre las tarjetas */
+    width: 100%;
+    margin-top: 20px; /* Ajusta el margen superior de las tarjetas según sea necesario */
+  }
+  

@@ -1,0 +1,32 @@
+/* NavBar.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  .NavBar {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, #03e3fc, #022d4f); /* Cambia los colores aquí */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: background 0.5s ease; /* Agrega una transición de 0.5 segundos a la propiedad background */
+  }
+  
+  .logo {
+    position: absolute;
+    left: 20px;
+  }
+  
+  .nav {
+    position: absolute;
+    right: 20px;
+  }
+  
+  
